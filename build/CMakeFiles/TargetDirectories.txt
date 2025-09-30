@@ -1,0 +1,3 @@
+/home/cary/agora-core/build/CMakeFiles/agora-core.dir
+/home/cary/agora-core/build/CMakeFiles/edit_cache.dir
+/home/cary/agora-core/build/CMakeFiles/rebuild_cache.dir
