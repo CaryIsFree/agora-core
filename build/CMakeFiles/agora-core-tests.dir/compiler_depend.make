@@ -25,6 +25,7 @@ CMakeFiles/agora-core-tests.dir/tests/OrderBook_test.cpp.o: /home/cary/agora-cor
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /home/cary/agora-core/src/Order.h \
   /home/cary/agora-core/src/OrderBook.h \
+  /home/cary/agora-core/src/Trade.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -665,6 +666,10 @@ _deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
 
 /usr/include/c++/13/bits/basic_ios.h:
 
+/home/cary/agora-core/src/Trade.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
 _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h:
 
 /usr/include/c++/13/stdexcept:
@@ -739,23 +744,11 @@ _deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h:
 
 /usr/include/c++/13/any:
 
-/usr/lib/x86_64-linux-gnu/libm.so:
-
-/usr/include/asm-generic/int-ll64.h:
-
-/usr/include/c++/13/bits/shared_ptr_atomic.h:
-
-/usr/include/c++/13/set:
-
 /usr/include/c++/13/bits/basic_ios.tcc:
 
 /usr/include/c++/13/pstl/execution_defs.h:
 
 /usr/include/linux/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/c++/13/bits/string_view.tcc:
 
 _deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
 
@@ -803,9 +796,21 @@ _deps/googletest-src/googletest/include/gtest/gtest-test-part.h:
 
 /usr/include/c++/13/bits/exception_defines.h:
 
+/usr/include/c++/13/bits/atomic_lockfree_defines.h:
+
+_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
+
 /usr/include/c++/13/system_error:
 
 /usr/include/c++/13/compare:
+
+/usr/lib/x86_64-linux-gnu/libm.so:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/usr/include/c++/13/bits/shared_ptr_atomic.h:
+
+/usr/include/c++/13/set:
 
 /usr/include/asm-generic/posix_types.h:
 
@@ -842,12 +847,6 @@ _deps/googletest-src/googletest/include/gtest/gtest.h:
 /home/cary/agora-core/tests/OrderBook_test.cpp:
 
 /usr/include/c++/13/array:
-
-_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
-
-/usr/include/c++/13/bits/atomic_lockfree_defines.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/c++/13/bits/allocated_ptr.h:
 
@@ -898,6 +897,10 @@ _deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h:
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/c++/13/bits/string_view.tcc:
 
 /usr/include/c++/13/bits/stringfwd.h:
 

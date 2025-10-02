@@ -4,6 +4,7 @@
 CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/OrderBook.cpp \
   /home/cary/agora-core/src/Order.h \
   /home/cary/agora-core/src/OrderBook.h \
+  /home/cary/agora-core/src/Trade.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -54,6 +55,7 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -64,6 +66,8 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
   /usr/include/c++/13/bits/stl_tree.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
@@ -71,6 +75,7 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
@@ -107,6 +112,7 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -303,6 +309,20 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
 /usr/include/c++/13/bits/stl_construct.h:
 
 /usr/include/c++/13/debug/debug.h:
@@ -317,11 +337,11 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/ios:
 
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
+
+/usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/c++/13/bits/allocator.h:
 
@@ -345,16 +365,6 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/type_traits:
 
-/usr/include/c++/13/bits/localefwd.h:
-
-/usr/include/c++/13/bits/exception_defines.h:
-
-/usr/include/c++/13/bits/locale_facets.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:
-
-/usr/include/time.h:
-
 /usr/include/c++/13/bits/locale_facets.tcc:
 
 /usr/include/c++/13/bits/requires_hosted.h:
@@ -367,6 +377,10 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/bits/stringfwd.h:
 
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/13/bits/hash_bytes.h:
+
 /usr/include/c++/13/cwctype:
 
 /usr/include/c++/13/bits/predefined_ops.h:
@@ -378,10 +392,6 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 /usr/include/asm-generic/errno.h:
 
 /usr/include/c++/13/cwchar:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/c++/13/bits/hash_bytes.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -403,15 +413,23 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/bits/basic_string.tcc:
 
+/usr/include/c++/13/bits/localefwd.h:
+
+/usr/include/c++/13/bits/exception_defines.h:
+
+/usr/include/c++/13/bits/locale_facets.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/include/time.h:
+
+/home/cary/agora-core/src/Trade.h:
+
 /home/cary/agora-core/src/OrderBook.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/c++/13/list:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -419,21 +437,17 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+/usr/include/c++/13/bits/basic_string.h:
 
-/usr/include/c++/13/cerrno:
-
-/usr/include/stdio.h:
+/usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
 /usr/include/c++/13/bits/ptr_traits.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
@@ -442,6 +456,8 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/13/cstddef:
+
+/usr/include/c++/13/vector:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -467,6 +483,8 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/bits/stl_pair.h:
 
+/usr/include/c++/13/bits/stl_vector.h:
+
 /usr/include/c++/13/bits/stl_multimap.h:
 
 /usr/include/c++/13/bits/istream.tcc:
@@ -477,23 +495,35 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 
 /usr/include/c++/13/bits/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
-/usr/include/c++/13/bits/basic_string.h:
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
-/usr/include/stdc-predef.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
-/usr/include/c++/13/bits/stl_map.h:
+/usr/include/c++/13/cerrno:
+
+/usr/include/stdio.h:
 
 /home/cary/agora-core/src/Order.h:
 
 /usr/include/c++/13/bits/stl_tree.h:
+
+/usr/include/c++/13/bits/stl_map.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/postypes.h:
 
 /usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/wctype.h:
+
+/usr/include/c++/13/exception:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -504,6 +534,8 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 /usr/include/c++/13/bits/stl_function.h:
 
 /usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/bits/vector.tcc:
 
 /usr/include/c++/13/bits/list.tcc:
 
@@ -600,17 +632,3 @@ CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o: /home/cary/agora-core/src/Ord
 /usr/include/stdint.h:
 
 /usr/include/stdlib.h:
-
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/c++/13/exception:
-
-/usr/include/wctype.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:

@@ -26,6 +26,7 @@ CMakeFiles/agora-core-tests.dir/tests/OrderBook_test.cpp.o
  /home/cary/agora-core/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h
  /home/cary/agora-core/src/Order.h
  /home/cary/agora-core/src/OrderBook.h
+ /home/cary/agora-core/src/Trade.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h

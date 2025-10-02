@@ -1,7 +1,10 @@
 #include "OrderBook.h"
 #include <iostream>
 
-void OrderBook::processOrder(const Order& newOrder) {
+std::vector<Trade> OrderBook::processOrder(const Order& newOrder) {
+    //Create a new instance called trades
+    std::vector<Trade> trades;
+
     if (newOrder.side == OrderSide::BUY) {
         // Logic for a new buy order
         /*
@@ -11,12 +14,12 @@ void OrderBook::processOrder(const Order& newOrder) {
         */
         if (asks_.empty() || newOrder.price < asks_.begin()->first) {
             bids_[newOrder.price].push_back(newOrder);
-            return;
+            return trades;
         }
 
         //Otherwise, a trade possible!
         std::cout << "Match is possible!" << std::endl;
-        matchOrders(newOrder);
+        matchOrders(newOrder, trades);
 
     }
     
@@ -30,17 +33,20 @@ void OrderBook::processOrder(const Order& newOrder) {
         */
         if (bids_.empty() || newOrder.price > bids_.begin()->first) {
             asks_[newOrder.price].push_back(newOrder);
-            return;
+            return trades;
         }
 
         //Otherwise, a trade is possible
         std::cout << "Match is possible!" << std::endl;
-        matchOrders(newOrder);
+        matchOrders(newOrder, trades);
         
     }
+
+    return trades;
+
 }
 
-void OrderBook::matchOrders(Order orderToMatch) {
+void OrderBook::matchOrders(Order orderToMatch, std::vector<Trade>& trades) {
     //Logic for fulfilling orders
 
     /*
@@ -60,9 +66,8 @@ void OrderBook::matchOrders(Order orderToMatch) {
             
             //Find the lowest trade quantity between both orders
             uint32_t tradeQuantity = std::min(orderToMatch.quantity, oldestAsk.quantity);
-
-            //Print a statement to show that this trade has occurred
-            std::cout << "TRADE EXECUTED: " << tradeQuantity << " shares @ " << oldestAsk.price << std::endl;
+                     
+            trades.emplace_back(orderToMatch.orderId, oldestAsk.orderId, oldestAsk.price, tradeQuantity);
 
             //Subtract the quantity for both orders
             orderToMatch.quantity -= tradeQuantity;
@@ -101,8 +106,7 @@ void OrderBook::matchOrders(Order orderToMatch) {
             //Find the lowest trade quantity between both orders
             uint32_t tradeQuantity = std::min(orderToMatch.quantity, oldestBid.quantity);
             
-            //Print a statement to show that this trade has occurred
-            std::cout << "TRADE EXECUTED: " << tradeQuantity << " shares @ " << oldestBid.price << std::endl;
+            trades.emplace_back(orderToMatch.orderId, oldestBid.orderId, oldestBid.price, tradeQuantity);
 
             //Subtract the quantity for both orders
             orderToMatch.quantity -= tradeQuantity;

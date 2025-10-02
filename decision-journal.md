@@ -36,7 +36,7 @@ The core order book was implemented using `std::map` with a `std::list` as the v
 
 **Reasoning:**
 I selected `std::map` for 3 main reasons:
- - **Price Priority:** `std::map` represents a self-balancing binary search tree. It automatically sorts price levels, which is fundamental when we need to keep track of which orders should be fulfilled first. Using 'std::greater<double>' perfectly reverses the sort order that will allow 'bids_' book to be highest-price-first.
+ - **Price Priority:** `std::map` represents a self-balancing binary search tree. It automatically sorts price levels, which is fundamental when we need to keep track of which orders should be fulfilled first. Using `std::greater<double>` perfectly reverses the sort order that will allow `bids_` book to be highest-price-first.
  - **Time Priority** The `std::list` as the value for `bids_` and `asks_` will allow for a natural **First-In, First-Out (FIFO)** approach at each price level. In an orderbook, we'd typically want orders to be fulfilled at a first-come, first-serve basis.
  - **Performance:** Insertions, deletions, and lookups have O(log N) operations (where N is the number of price levels), which for this project, is pretty fast.
 

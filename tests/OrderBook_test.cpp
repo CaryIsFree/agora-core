@@ -63,7 +63,7 @@ TEST_F(OrderBookTest, SimpleFullMatchBuyInitiated) {
 
     // 2. ACTION: Process a new BUY order that should completely fill the SELL order
     Order buyOrder(2, OrderSide::BUY, 100, 10.00);
-    orderBook.processOrder(buyOrder);
+    std::vector<Trade> trades = orderBook.processOrder(buyOrder);
 
     // 3. VERIFICATION: The most important part!
     // After the trade, the book should be completely empty.
@@ -73,7 +73,8 @@ TEST_F(OrderBookTest, SimpleFullMatchBuyInitiated) {
     EXPECT_TRUE(bids.empty());
     EXPECT_TRUE(asks.empty());
 
-    // In the future, we will also verify that a Trade object was created.
+    //Verify that a Trade object was created.
+    EXPECT_FALSE(trades.empty());
 }
 
 // --- TEST 4: Test a simple one-to-one full match ---
@@ -84,7 +85,7 @@ TEST_F(OrderBookTest, SimpleFullMatchSellInitiated) {
 
     // 2. ACTION: Process a new SELL order that should completely fill the BUY order
     Order sellOrder(2, OrderSide::SELL, 100, 10.00);
-    orderBook.processOrder(sellOrder);
+    std::vector<Trade> trades = orderBook.processOrder(sellOrder);
 
     // 3. VERIFICATION: The most important part!
     // After the trade, the book should be completely empty.
@@ -94,7 +95,8 @@ TEST_F(OrderBookTest, SimpleFullMatchSellInitiated) {
     EXPECT_TRUE(bids.empty());
     EXPECT_TRUE(asks.empty());
 
-    // In the future, we will also verify that a Trade object was created.
+    // Verify that a Trade object was created.
+    EXPECT_FALSE(trades.empty());
 }
 
 // --- TEST 5: Test a partial fill where the incoming order is larger ---

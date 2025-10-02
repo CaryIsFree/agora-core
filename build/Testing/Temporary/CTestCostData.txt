@@ -1,17 +1,17 @@
 OrderBookTest.AddOrderToEmptyBook 7 0.000354788
 OrderBookTest.SimpleMatch 7 0.000251819
-OrderBookTest.AddBuyOrderToEmptyBook 15 0.00015034
-OrderBookTest.AddSellOrderToEmptyBook 14 0.000154141
+OrderBookTest.AddBuyOrderToEmptyBook 19 0.00011249
+OrderBookTest.AddSellOrderToEmptyBook 18 9.90085e-05
 OrderBookTest.SimpleFullMatch 6 0.00035523
 OrderBookTest.PartialFillIncomingOrderLarger 5 0.000360283
 OrderBookTest.PartialFillRestingOrderLarger 4 0.000544174
 OrderBookTest.WalkTheBookFullFill 2 0.00102848
-OrderBookTest.SimpleFullMatchBuyInitiated 7 0.000336172
-OrderBookTest.SimpleFullMatchSellInitiated 7 0.000314045
-OrderBookTest.PartialFillIncomingBuyLarger 6 0.000328569
-OrderBookTest.PartialFillIncomingSellLarger 3 0.000628148
-OrderBookTest.PartialFillRestingBuyLarger 6 0.000365561
-OrderBookTest.PartialFillRestingSellLarger 6 0.000318454
-OrderBookTest.WalkTheBookBuyInitiated 6 0.000339877
-OrderBookTest.WalkTheBookSellInitiated 3 0.000668204
+OrderBookTest.SimpleFullMatchBuyInitiated 11 0.000159461
+OrderBookTest.SimpleFullMatchSellInitiated 9 0.000256364
+OrderBookTest.PartialFillIncomingBuyLarger 10 0.000206908
+OrderBookTest.PartialFillIncomingSellLarger 7 0.000257018
+OrderBookTest.PartialFillRestingBuyLarger 10 0.000221724
+OrderBookTest.PartialFillRestingSellLarger 10 0.00021518
+OrderBookTest.WalkTheBookBuyInitiated 10 0.000179461
+OrderBookTest.WalkTheBookSellInitiated 7 0.000290564
 ---
