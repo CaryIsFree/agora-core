@@ -1,0 +1,2 @@
+/usr/bin/ar qc libagora-core-lib.a "CMakeFiles/agora-core-lib.dir/src/OrderBook.cpp.o"
+/usr/bin/ranlib libagora-core-lib.a

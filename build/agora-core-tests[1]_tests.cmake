@@ -1,0 +1,5 @@
+add_test([=[OrderBookTest.AddOrderToEmptyBook]=]  /home/cary/agora-core/build/agora-core-tests [==[--gtest_filter=OrderBookTest.AddOrderToEmptyBook]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[OrderBookTest.AddOrderToEmptyBook]=]  PROPERTIES WORKING_DIRECTORY /home/cary/agora-core/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[OrderBookTest.SimpleMatch]=]  /home/cary/agora-core/build/agora-core-tests [==[--gtest_filter=OrderBookTest.SimpleMatch]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[OrderBookTest.SimpleMatch]=]  PROPERTIES WORKING_DIRECTORY /home/cary/agora-core/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  agora-core-tests_TESTS OrderBookTest.AddOrderToEmptyBook OrderBookTest.SimpleMatch)
