@@ -1,10 +1,10 @@
-Start testing: Oct 02 09:59 EDT
+Start testing: Oct 02 10:28 EDT
 ----------------------------------------------------------
-1/5 Testing: OrderBookTest.AddBuyOrderToEmptyBook
-1/5 Test: OrderBookTest.AddBuyOrderToEmptyBook
+1/10 Testing: OrderBookTest.AddBuyOrderToEmptyBook
+1/10 Test: OrderBookTest.AddBuyOrderToEmptyBook
 Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.AddBuyOrderToEmptyBook" "--gtest_also_run_disabled_tests"
 Directory: /home/cary/agora-core/build
-"OrderBookTest.AddBuyOrderToEmptyBook" start time: Oct 02 09:59 EDT
+"OrderBookTest.AddBuyOrderToEmptyBook" start time: Oct 02 10:28 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -23,15 +23,15 @@ Note: Google Test filter = OrderBookTest.AddBuyOrderToEmptyBook
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.AddBuyOrderToEmptyBook" end time: Oct 02 09:59 EDT
+"OrderBookTest.AddBuyOrderToEmptyBook" end time: Oct 02 10:28 EDT
 "OrderBookTest.AddBuyOrderToEmptyBook" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/5 Testing: OrderBookTest.AddSellOrderToEmptyBook
-2/5 Test: OrderBookTest.AddSellOrderToEmptyBook
+2/10 Testing: OrderBookTest.AddSellOrderToEmptyBook
+2/10 Test: OrderBookTest.AddSellOrderToEmptyBook
 Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.AddSellOrderToEmptyBook" "--gtest_also_run_disabled_tests"
 Directory: /home/cary/agora-core/build
-"OrderBookTest.AddSellOrderToEmptyBook" start time: Oct 02 09:59 EDT
+"OrderBookTest.AddSellOrderToEmptyBook" start time: Oct 02 10:28 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -50,26 +50,26 @@ Note: Google Test filter = OrderBookTest.AddSellOrderToEmptyBook
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.AddSellOrderToEmptyBook" end time: Oct 02 09:59 EDT
+"OrderBookTest.AddSellOrderToEmptyBook" end time: Oct 02 10:28 EDT
 "OrderBookTest.AddSellOrderToEmptyBook" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/5 Testing: OrderBookTest.SimpleFullMatch
-3/5 Test: OrderBookTest.SimpleFullMatch
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatch" "--gtest_also_run_disabled_tests"
+3/10 Testing: OrderBookTest.SimpleFullMatchBuyInitiated
+3/10 Test: OrderBookTest.SimpleFullMatchBuyInitiated
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatchBuyInitiated" "--gtest_also_run_disabled_tests"
 Directory: /home/cary/agora-core/build
-"OrderBookTest.SimpleFullMatch" start time: Oct 02 09:59 EDT
+"OrderBookTest.SimpleFullMatchBuyInitiated" start time: Oct 02 10:28 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
-Note: Google Test filter = OrderBookTest.SimpleFullMatch
+Note: Google Test filter = OrderBookTest.SimpleFullMatchBuyInitiated
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from OrderBookTest
-[ RUN      ] OrderBookTest.SimpleFullMatch
+[ RUN      ] OrderBookTest.SimpleFullMatchBuyInitiated
 Match is possible!
 TRADE EXECUTED: 100 shares @ 10
-[       OK ] OrderBookTest.SimpleFullMatch (0 ms)
+[       OK ] OrderBookTest.SimpleFullMatchBuyInitiated (0 ms)
 [----------] 1 test from OrderBookTest (0 ms total)
 
 [----------] Global test environment tear-down
@@ -79,26 +79,26 @@ TRADE EXECUTED: 100 shares @ 10
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.SimpleFullMatch" end time: Oct 02 09:59 EDT
-"OrderBookTest.SimpleFullMatch" time elapsed: 00:00:00
+"OrderBookTest.SimpleFullMatchBuyInitiated" end time: Oct 02 10:28 EDT
+"OrderBookTest.SimpleFullMatchBuyInitiated" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/5 Testing: OrderBookTest.PartialFillIncomingOrderLarger
-4/5 Test: OrderBookTest.PartialFillIncomingOrderLarger
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingOrderLarger" "--gtest_also_run_disabled_tests"
+4/10 Testing: OrderBookTest.SimpleFullMatchSellInitiated
+4/10 Test: OrderBookTest.SimpleFullMatchSellInitiated
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatchSellInitiated" "--gtest_also_run_disabled_tests"
 Directory: /home/cary/agora-core/build
-"OrderBookTest.PartialFillIncomingOrderLarger" start time: Oct 02 09:59 EDT
+"OrderBookTest.SimpleFullMatchSellInitiated" start time: Oct 02 10:28 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
-Note: Google Test filter = OrderBookTest.PartialFillIncomingOrderLarger
+Note: Google Test filter = OrderBookTest.SimpleFullMatchSellInitiated
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from OrderBookTest
-[ RUN      ] OrderBookTest.PartialFillIncomingOrderLarger
+[ RUN      ] OrderBookTest.SimpleFullMatchSellInitiated
 Match is possible!
 TRADE EXECUTED: 100 shares @ 10
-[       OK ] OrderBookTest.PartialFillIncomingOrderLarger (0 ms)
+[       OK ] OrderBookTest.SimpleFullMatchSellInitiated (0 ms)
 [----------] 1 test from OrderBookTest (0 ms total)
 
 [----------] Global test environment tear-down
@@ -108,26 +108,84 @@ TRADE EXECUTED: 100 shares @ 10
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.PartialFillIncomingOrderLarger" end time: Oct 02 09:59 EDT
-"OrderBookTest.PartialFillIncomingOrderLarger" time elapsed: 00:00:00
+"OrderBookTest.SimpleFullMatchSellInitiated" end time: Oct 02 10:28 EDT
+"OrderBookTest.SimpleFullMatchSellInitiated" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/5 Testing: OrderBookTest.PartialFillRestingOrderLarger
-5/5 Test: OrderBookTest.PartialFillRestingOrderLarger
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingOrderLarger" "--gtest_also_run_disabled_tests"
+5/10 Testing: OrderBookTest.PartialFillIncomingBuyLarger
+5/10 Test: OrderBookTest.PartialFillIncomingBuyLarger
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingBuyLarger" "--gtest_also_run_disabled_tests"
 Directory: /home/cary/agora-core/build
-"OrderBookTest.PartialFillRestingOrderLarger" start time: Oct 02 09:59 EDT
+"OrderBookTest.PartialFillIncomingBuyLarger" start time: Oct 02 10:28 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
-Note: Google Test filter = OrderBookTest.PartialFillRestingOrderLarger
+Note: Google Test filter = OrderBookTest.PartialFillIncomingBuyLarger
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from OrderBookTest
-[ RUN      ] OrderBookTest.PartialFillRestingOrderLarger
+[ RUN      ] OrderBookTest.PartialFillIncomingBuyLarger
+Match is possible!
+TRADE EXECUTED: 100 shares @ 10
+[       OK ] OrderBookTest.PartialFillIncomingBuyLarger (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PartialFillIncomingBuyLarger" end time: Oct 02 10:28 EDT
+"OrderBookTest.PartialFillIncomingBuyLarger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/10 Testing: OrderBookTest.PartialFillIncomingSellLarger
+6/10 Test: OrderBookTest.PartialFillIncomingSellLarger
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingSellLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/agora-core/build
+"OrderBookTest.PartialFillIncomingSellLarger" start time: Oct 02 10:28 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PartialFillIncomingSellLarger
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PartialFillIncomingSellLarger
+Match is possible!
+TRADE EXECUTED: 100 shares @ 10
+[       OK ] OrderBookTest.PartialFillIncomingSellLarger (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PartialFillIncomingSellLarger" end time: Oct 02 10:28 EDT
+"OrderBookTest.PartialFillIncomingSellLarger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/10 Testing: OrderBookTest.PartialFillRestingBuyLarger
+7/10 Test: OrderBookTest.PartialFillRestingBuyLarger
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingBuyLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/agora-core/build
+"OrderBookTest.PartialFillRestingBuyLarger" start time: Oct 02 10:28 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PartialFillRestingBuyLarger
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PartialFillRestingBuyLarger
 Match is possible!
 TRADE EXECUTED: 75 shares @ 10
-[       OK ] OrderBookTest.PartialFillRestingOrderLarger (0 ms)
+[       OK ] OrderBookTest.PartialFillRestingBuyLarger (0 ms)
 [----------] 1 test from OrderBookTest (0 ms total)
 
 [----------] Global test environment tear-down
@@ -137,8 +195,97 @@ TRADE EXECUTED: 75 shares @ 10
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.PartialFillRestingOrderLarger" end time: Oct 02 09:59 EDT
-"OrderBookTest.PartialFillRestingOrderLarger" time elapsed: 00:00:00
+"OrderBookTest.PartialFillRestingBuyLarger" end time: Oct 02 10:28 EDT
+"OrderBookTest.PartialFillRestingBuyLarger" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 02 09:59 EDT
+8/10 Testing: OrderBookTest.PartialFillRestingSellLarger
+8/10 Test: OrderBookTest.PartialFillRestingSellLarger
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingSellLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/agora-core/build
+"OrderBookTest.PartialFillRestingSellLarger" start time: Oct 02 10:28 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.PartialFillRestingSellLarger
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.PartialFillRestingSellLarger
+Match is possible!
+TRADE EXECUTED: 75 shares @ 10
+[       OK ] OrderBookTest.PartialFillRestingSellLarger (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.PartialFillRestingSellLarger" end time: Oct 02 10:28 EDT
+"OrderBookTest.PartialFillRestingSellLarger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/10 Testing: OrderBookTest.WalkTheBookBuyInitiated
+9/10 Test: OrderBookTest.WalkTheBookBuyInitiated
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.WalkTheBookBuyInitiated" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/agora-core/build
+"OrderBookTest.WalkTheBookBuyInitiated" start time: Oct 02 10:28 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.WalkTheBookBuyInitiated
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.WalkTheBookBuyInitiated
+Match is possible!
+TRADE EXECUTED: 50 shares @ 10
+TRADE EXECUTED: 50 shares @ 10.01
+[       OK ] OrderBookTest.WalkTheBookBuyInitiated (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.WalkTheBookBuyInitiated" end time: Oct 02 10:28 EDT
+"OrderBookTest.WalkTheBookBuyInitiated" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/10 Testing: OrderBookTest.WalkTheBookSellInitiated
+10/10 Test: OrderBookTest.WalkTheBookSellInitiated
+Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.WalkTheBookSellInitiated" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/agora-core/build
+"OrderBookTest.WalkTheBookSellInitiated" start time: Oct 02 10:28 EDT
+Output:
+----------------------------------------------------------
+Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = OrderBookTest.WalkTheBookSellInitiated
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from OrderBookTest
+[ RUN      ] OrderBookTest.WalkTheBookSellInitiated
+Match is possible!
+TRADE EXECUTED: 50 shares @ 10.01
+TRADE EXECUTED: 50 shares @ 10
+[       OK ] OrderBookTest.WalkTheBookSellInitiated (0 ms)
+[----------] 1 test from OrderBookTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTest.WalkTheBookSellInitiated" end time: Oct 02 10:28 EDT
+"OrderBookTest.WalkTheBookSellInitiated" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 02 10:28 EDT
