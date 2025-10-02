@@ -1,5 +1,7 @@
 OrderBookTest.AddOrderToEmptyBook 7 0.000354788
 OrderBookTest.SimpleMatch 7 0.000251819
-OrderBookTest.AddBuyOrderToEmptyBook 2 0.00106455
-OrderBookTest.AddSellOrderToEmptyBook 1 0.00217943
+OrderBookTest.AddBuyOrderToEmptyBook 5 0.000407484
+OrderBookTest.AddSellOrderToEmptyBook 4 0.000523364
+OrderBookTest.SimpleFullMatch 3 0.000630789
+OrderBookTest.PartialFillIncomingOrderLarger 1 0.00206506
 ---

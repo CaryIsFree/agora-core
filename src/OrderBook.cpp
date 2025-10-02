@@ -51,7 +51,7 @@ void OrderBook::matchOrders(Order orderToMatch) {
         Continue to complete orders until the current order no longer has quantity nor
         the buying price is less than the ask price
         */
-        while (orderToMatch.quantity > 0 && orderToMatch.price >= asks_.begin()->first) {
+        while (orderToMatch.quantity > 0 && !asks_.empty() && orderToMatch.price >= asks_.begin()->first) {
             //Grab all the orders at the beginning of the asks_ book (SAME price)
             auto& bestAskLevel = asks_.begin()->second;
 
@@ -91,7 +91,7 @@ void OrderBook::matchOrders(Order orderToMatch) {
         Continue to complete orders until the current order no longer has quantity nor
         the selling price is GREATER than the buy price
         */
-        while (orderToMatch.quantity > 0 && orderToMatch.price <= bids_.begin()->first) {
+        while (orderToMatch.quantity > 0 && !bids_.empty() && orderToMatch.price <= bids_.begin()->first) {
             //Grab all the orders at the beginning of the bids_ book (SAME price)
             auto& bestBidLevel = bids_.begin()->second;
 
