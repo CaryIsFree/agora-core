@@ -16,4 +16,6 @@ class OrderBook {
     public:
         //It will take a new order and process it against the book
         void processOrder(const Order& newOrder);
+        const std::map<double, std::list<Order>, std::greater<double>>& getBids() const { return bids_; }
+        const std::map<double, std::list<Order>>& getAsks() const { return asks_; }
 };
