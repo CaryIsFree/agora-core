@@ -6,4 +6,6 @@ add_test([=[OrderBookTest.SimpleFullMatch]=]  /home/cary/agora-core/build/agora-
 set_tests_properties([=[OrderBookTest.SimpleFullMatch]=]  PROPERTIES WORKING_DIRECTORY /home/cary/agora-core/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
 add_test([=[OrderBookTest.PartialFillIncomingOrderLarger]=]  /home/cary/agora-core/build/agora-core-tests [==[--gtest_filter=OrderBookTest.PartialFillIncomingOrderLarger]==] --gtest_also_run_disabled_tests)
 set_tests_properties([=[OrderBookTest.PartialFillIncomingOrderLarger]=]  PROPERTIES WORKING_DIRECTORY /home/cary/agora-core/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  agora-core-tests_TESTS OrderBookTest.AddBuyOrderToEmptyBook OrderBookTest.AddSellOrderToEmptyBook OrderBookTest.SimpleFullMatch OrderBookTest.PartialFillIncomingOrderLarger)
+add_test([=[OrderBookTest.PartialFillRestingOrderLarger]=]  /home/cary/agora-core/build/agora-core-tests [==[--gtest_filter=OrderBookTest.PartialFillRestingOrderLarger]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[OrderBookTest.PartialFillRestingOrderLarger]=]  PROPERTIES WORKING_DIRECTORY /home/cary/agora-core/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  agora-core-tests_TESTS OrderBookTest.AddBuyOrderToEmptyBook OrderBookTest.AddSellOrderToEmptyBook OrderBookTest.SimpleFullMatch OrderBookTest.PartialFillIncomingOrderLarger OrderBookTest.PartialFillRestingOrderLarger)

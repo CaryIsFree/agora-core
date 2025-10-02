@@ -106,3 +106,33 @@ TEST_F(OrderBookTest, PartialFillIncomingOrderLarger) {
     EXPECT_EQ(placedOrder.quantity, 50);    // The remaining quantity should be 50
     EXPECT_EQ(placedOrder.price, 10.00);    // At the original price
 }
+
+// --- TEST 5: Test a partial fill where the RESTING order is larger ---
+TEST_F(OrderBookTest, PartialFillRestingOrderLarger) {
+    // 1. SETUP: Add a large resting SELL order for 200 shares
+    Order sellOrder(1, OrderSide::SELL, 200, 10.00);
+    orderBook.processOrder(sellOrder);
+
+    // 2. ACTION: Process a new, smaller BUY order
+    Order buyOrder(2, OrderSide::BUY, 75, 10.00);
+    orderBook.processOrder(buyOrder);
+
+    // 3. VERIFICATION:
+    const auto& bids = orderBook.getBids();
+    const auto& asks = orderBook.getAsks();
+
+    // The bids book should be empty, as the incoming order was fully filled.
+    EXPECT_TRUE(bids.empty());
+
+    // The asks book should NOT be empty.
+    EXPECT_FALSE(asks.empty());
+    EXPECT_EQ(asks.size(), 1);
+
+    // Check the details of the remaining resting order.
+    const auto& orderList = asks.at(10.00);
+    EXPECT_EQ(orderList.size(), 1);
+
+    const auto& placedOrder = orderList.front();
+    EXPECT_EQ(placedOrder.orderId, 1);      // It's the original seller's order
+    EXPECT_EQ(placedOrder.quantity, 125);   // The remaining quantity should be 125 (200 - 75)
+}
