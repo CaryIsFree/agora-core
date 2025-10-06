@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/agora-core-tests.dir/link.d"
   "CMakeFiles/agora-core-tests.dir/tests/OrderBook_test.cpp.o"
   "CMakeFiles/agora-core-tests.dir/tests/OrderBook_test.cpp.o.d"
   "agora-core-tests"

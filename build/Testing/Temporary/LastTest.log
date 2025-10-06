@@ -1,13 +1,13 @@
-Start testing: Oct 02 11:44 EDT
+Start testing: Oct 06 16:41 EDT
 ----------------------------------------------------------
 1/10 Testing: OrderBookTest.AddBuyOrderToEmptyBook
 1/10 Test: OrderBookTest.AddBuyOrderToEmptyBook
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.AddBuyOrderToEmptyBook" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.AddBuyOrderToEmptyBook" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.AddBuyOrderToEmptyBook" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.AddBuyOrderToEmptyBook" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.AddBuyOrderToEmptyBook
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -20,21 +20,21 @@ Note: Google Test filter = OrderBookTest.AddBuyOrderToEmptyBook
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.AddBuyOrderToEmptyBook" end time: Oct 02 11:44 EDT
+"OrderBookTest.AddBuyOrderToEmptyBook" end time: Oct 06 16:41 EDT
 "OrderBookTest.AddBuyOrderToEmptyBook" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/10 Testing: OrderBookTest.AddSellOrderToEmptyBook
 2/10 Test: OrderBookTest.AddSellOrderToEmptyBook
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.AddSellOrderToEmptyBook" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.AddSellOrderToEmptyBook" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.AddSellOrderToEmptyBook" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.AddSellOrderToEmptyBook" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.AddSellOrderToEmptyBook
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -47,21 +47,21 @@ Note: Google Test filter = OrderBookTest.AddSellOrderToEmptyBook
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.AddSellOrderToEmptyBook" end time: Oct 02 11:44 EDT
+"OrderBookTest.AddSellOrderToEmptyBook" end time: Oct 06 16:41 EDT
 "OrderBookTest.AddSellOrderToEmptyBook" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/10 Testing: OrderBookTest.SimpleFullMatchBuyInitiated
 3/10 Test: OrderBookTest.SimpleFullMatchBuyInitiated
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatchBuyInitiated" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.SimpleFullMatchBuyInitiated" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatchBuyInitiated" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.SimpleFullMatchBuyInitiated" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.SimpleFullMatchBuyInitiated
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -75,21 +75,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.SimpleFullMatchBuyInitiated" end time: Oct 02 11:44 EDT
+"OrderBookTest.SimpleFullMatchBuyInitiated" end time: Oct 06 16:41 EDT
 "OrderBookTest.SimpleFullMatchBuyInitiated" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/10 Testing: OrderBookTest.SimpleFullMatchSellInitiated
 4/10 Test: OrderBookTest.SimpleFullMatchSellInitiated
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatchSellInitiated" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.SimpleFullMatchSellInitiated" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.SimpleFullMatchSellInitiated" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.SimpleFullMatchSellInitiated" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.SimpleFullMatchSellInitiated
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -103,21 +103,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.SimpleFullMatchSellInitiated" end time: Oct 02 11:44 EDT
+"OrderBookTest.SimpleFullMatchSellInitiated" end time: Oct 06 16:41 EDT
 "OrderBookTest.SimpleFullMatchSellInitiated" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/10 Testing: OrderBookTest.PartialFillIncomingBuyLarger
 5/10 Test: OrderBookTest.PartialFillIncomingBuyLarger
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingBuyLarger" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.PartialFillIncomingBuyLarger" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingBuyLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.PartialFillIncomingBuyLarger" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.PartialFillIncomingBuyLarger
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -131,21 +131,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.PartialFillIncomingBuyLarger" end time: Oct 02 11:44 EDT
+"OrderBookTest.PartialFillIncomingBuyLarger" end time: Oct 06 16:41 EDT
 "OrderBookTest.PartialFillIncomingBuyLarger" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 6/10 Testing: OrderBookTest.PartialFillIncomingSellLarger
 6/10 Test: OrderBookTest.PartialFillIncomingSellLarger
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingSellLarger" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.PartialFillIncomingSellLarger" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillIncomingSellLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.PartialFillIncomingSellLarger" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.PartialFillIncomingSellLarger
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -159,21 +159,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.PartialFillIncomingSellLarger" end time: Oct 02 11:44 EDT
+"OrderBookTest.PartialFillIncomingSellLarger" end time: Oct 06 16:41 EDT
 "OrderBookTest.PartialFillIncomingSellLarger" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 7/10 Testing: OrderBookTest.PartialFillRestingBuyLarger
 7/10 Test: OrderBookTest.PartialFillRestingBuyLarger
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingBuyLarger" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.PartialFillRestingBuyLarger" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingBuyLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.PartialFillRestingBuyLarger" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.PartialFillRestingBuyLarger
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -187,21 +187,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.PartialFillRestingBuyLarger" end time: Oct 02 11:44 EDT
+"OrderBookTest.PartialFillRestingBuyLarger" end time: Oct 06 16:41 EDT
 "OrderBookTest.PartialFillRestingBuyLarger" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 8/10 Testing: OrderBookTest.PartialFillRestingSellLarger
 8/10 Test: OrderBookTest.PartialFillRestingSellLarger
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingSellLarger" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.PartialFillRestingSellLarger" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.PartialFillRestingSellLarger" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.PartialFillRestingSellLarger" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.PartialFillRestingSellLarger
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -215,21 +215,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.PartialFillRestingSellLarger" end time: Oct 02 11:44 EDT
+"OrderBookTest.PartialFillRestingSellLarger" end time: Oct 06 16:41 EDT
 "OrderBookTest.PartialFillRestingSellLarger" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 9/10 Testing: OrderBookTest.WalkTheBookBuyInitiated
 9/10 Test: OrderBookTest.WalkTheBookBuyInitiated
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.WalkTheBookBuyInitiated" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.WalkTheBookBuyInitiated" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.WalkTheBookBuyInitiated" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.WalkTheBookBuyInitiated" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.WalkTheBookBuyInitiated
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -243,21 +243,21 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.WalkTheBookBuyInitiated" end time: Oct 02 11:44 EDT
+"OrderBookTest.WalkTheBookBuyInitiated" end time: Oct 06 16:41 EDT
 "OrderBookTest.WalkTheBookBuyInitiated" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 10/10 Testing: OrderBookTest.WalkTheBookSellInitiated
 10/10 Test: OrderBookTest.WalkTheBookSellInitiated
-Command: "/home/cary/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.WalkTheBookSellInitiated" "--gtest_also_run_disabled_tests"
-Directory: /home/cary/agora-core/build
-"OrderBookTest.WalkTheBookSellInitiated" start time: Oct 02 11:44 EDT
+Command: "/home/cary/repos/agora-core/build/agora-core-tests" "--gtest_filter=OrderBookTest.WalkTheBookSellInitiated" "--gtest_also_run_disabled_tests"
+Directory: /home/cary/repos/agora-core/build
+"OrderBookTest.WalkTheBookSellInitiated" start time: Oct 06 16:41 EDT
 Output:
 ----------------------------------------------------------
-Running main() from /home/cary/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/cary/repos/agora-core/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = OrderBookTest.WalkTheBookSellInitiated
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -271,11 +271,11 @@ Match is possible!
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"OrderBookTest.WalkTheBookSellInitiated" end time: Oct 02 11:44 EDT
+"OrderBookTest.WalkTheBookSellInitiated" end time: Oct 06 16:41 EDT
 "OrderBookTest.WalkTheBookSellInitiated" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 02 11:44 EDT
+End testing: Oct 06 16:41 EDT
