@@ -1,1 +1,0 @@
-/usr/bin/c++ "CMakeFiles/agora-core-app.dir/main.cpp.o" -o agora-core-app  libagora-core-lib.a 

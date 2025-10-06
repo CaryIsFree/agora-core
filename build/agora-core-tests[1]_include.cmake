@@ -1,5 +1,0 @@
-if(EXISTS "/home/cary/repos/agora-core/build/agora-core-tests[1]_tests.cmake")
-  include("/home/cary/repos/agora-core/build/agora-core-tests[1]_tests.cmake")
-else()
-  add_test(agora-core-tests_NOT_BUILT agora-core-tests_NOT_BUILT)
-endif()
