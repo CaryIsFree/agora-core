@@ -13,7 +13,9 @@ std::vector<Trade> OrderBook::processOrder(const Order& newOrder) {
         then rest it in the bids_ book
         */
         if (asks_.empty() || newOrder.price < asks_.begin()->first) {
-            bids_[newOrder.price].push_back(newOrder);
+            auto& bidList = bids_[newOrder.price];
+            bidList.push_back(newOrder);
+            orderMap_[newOrder.orderId] = std::prev(bidList.end());
             return trades;
         }
 
@@ -32,7 +34,9 @@ std::vector<Trade> OrderBook::processOrder(const Order& newOrder) {
         then rest it in the asks_ book
         */
         if (bids_.empty() || newOrder.price > bids_.begin()->first) {
-            asks_[newOrder.price].push_back(newOrder);
+            auto& askList = asks_[newOrder.price];
+            askList.push_back(newOrder);
+            orderMap_[newOrder.orderId] = std::prev(askList.end());
             return trades;
         }
 
@@ -73,18 +77,23 @@ void OrderBook::matchOrders(Order orderToMatch, std::vector<Trade>& trades) {
             orderToMatch.quantity -= tradeQuantity;
             oldestAsk.quantity -= tradeQuantity;
 
-            //If the oldestAsk quantity is zero, remove it from the book
-            if (oldestAsk.quantity == 0)
+            //If the oldestAsk quantity is zero, remove it from the book and map
+            if (oldestAsk.quantity == 0) {
+                orderMap_.erase(oldestAsk.orderId);
                 bestAskLevel.pop_front();
-            
+            }
+                
             //If the level is empty, remove the level as well
             if (bestAskLevel.empty())
                 asks_.erase(asks_.begin());
         }
 
-        //If the orderToMatch hasn't been fulfilled, rest it in the book
-        if (orderToMatch.quantity > 0)
-            bids_[orderToMatch.price].push_back(orderToMatch);
+        //If the orderToMatch hasn't been fulfilled, rest it in the book and map
+        if (orderToMatch.quantity > 0) {
+            auto& bidList = bids_[orderToMatch.price];
+            bidList.push_back(orderToMatch);
+            orderMap_[orderToMatch.orderId] = std::prev(bidList.end());
+        }
 
     }
 
@@ -113,17 +122,59 @@ void OrderBook::matchOrders(Order orderToMatch, std::vector<Trade>& trades) {
             oldestBid.quantity -= tradeQuantity;
 
             //If the oldestAsk quantity is zero, remove it from the book
-            if (oldestBid.quantity == 0)
+            if (oldestBid.quantity == 0) {
+                orderMap_.erase(oldestBid.orderId); //Clean up the map
                 bestBidLevel.pop_front();
-            
+            }
+                
             //If the level is empty, remove the level as well
             if (bestBidLevel.empty())
                 bids_.erase(bids_.begin());
         }
 
-        //If the orderToMatch hasn't been fulfilled, rest it in the book
-        if (orderToMatch.quantity > 0)
-            asks_[orderToMatch.price].push_back(orderToMatch);
+        //If the orderToMatch hasn't been fulfilled, rest it in the book and map
+        if (orderToMatch.quantity > 0) {
+            auto& askList = asks_[orderToMatch.price];
+            askList.push_back(orderToMatch);
+            orderMap_[orderToMatch.orderId] = std::prev(askList.end());
+        }
 
     }
+}
+
+void OrderBook::cancelOrder(uint64_t orderId) {
+    // 1. O(1) lookup to find the order's location
+    auto it = orderMap_.find(orderId);
+
+    // Order ID not found, maybe it was already filled or cancelled.
+    // In a real system, you might log this. For now, we just return.
+    if (it == orderMap_.end()) {
+        //TODO: ADD SOMETHING TO DO MORE THAN JUST RETURN
+        return;
+    }
+
+    // 2. Get the iterator to the order in the std::list
+    auto& orderIterator = it->second;
+
+    // 3. Get the order's data to know which book to look in
+    const Order& order = *orderIterator;
+    
+    // 4. Erase the order from the correct book
+    if (order.side == OrderSide::BUY) {
+        // Get the list at the order's price and erase the order using its iterator
+        bids_.at(order.price).erase(orderIterator);
+        // If the price level is now empty, remove it
+        if (bids_.at(order.price).empty()) {
+            bids_.erase(order.price);
+        }
+    } 
+    else if (order.side == OrderSide::SELL) {
+        asks_.at(order.price).erase(orderIterator);
+        if (asks_.at(order.price).empty()) {
+            asks_.erase(order.price);
+        }
+    }
+
+    // 5. O(1) cleanup of the map
+    orderMap_.erase(it);
 }

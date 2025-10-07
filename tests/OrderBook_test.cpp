@@ -250,3 +250,117 @@ TEST_F(OrderBookTest, WalkTheBookSellInitiated) {
     EXPECT_TRUE(bids.empty());
     EXPECT_TRUE(asks.empty());
 }
+
+// Test that we can cancel one of multiple BUY orders at a price level.
+TEST_F(OrderBookTest, CancelRestingBuyOrder) {
+    // 1. SETUP: Add two BUY orders.
+    Order buyOrder1(1, OrderSide::BUY, 100, 10.00);
+    Order buyOrder2(2, OrderSide::BUY, 100, 10.00);
+    orderBook.processOrder(buyOrder1);
+    orderBook.processOrder(buyOrder2);
+    
+    // Verify initial state
+    EXPECT_EQ(orderBook.getBids().at(10.00).size(), 2);
+
+    // 2. ACTION: Cancel the first order.
+    orderBook.cancelOrder(1);
+
+    // 3. VERIFICATION:
+    const auto& bids = orderBook.getBids();
+    EXPECT_FALSE(bids.empty());
+    EXPECT_EQ(bids.size(), 1);
+    const auto& orderList = bids.at(10.00);
+    EXPECT_EQ(orderList.size(), 1);
+    EXPECT_EQ(orderList.front().orderId, 2); // The remaining order should be order #2
+}
+
+// Test that we can cancel one of multiple SELL orders at a price level.
+TEST_F(OrderBookTest, CancelRestingSellOrder) {
+    // 1. SETUP: Add two SELL orders.
+    Order sellOrder1(1, OrderSide::SELL, 100, 10.25);
+    Order sellOrder2(2, OrderSide::SELL, 100, 10.25);
+    orderBook.processOrder(sellOrder1);
+    orderBook.processOrder(sellOrder2);
+
+    // Verify initial state
+    EXPECT_EQ(orderBook.getAsks().at(10.25).size(), 2);
+
+    // 2. ACTION: Cancel the second order.
+    orderBook.cancelOrder(2);
+
+    // 3. VERIFICATION:
+    const auto& asks = orderBook.getAsks();
+    EXPECT_FALSE(asks.empty());
+    EXPECT_EQ(asks.size(), 1);
+    const auto& orderList = asks.at(10.25);
+    EXPECT_EQ(orderList.size(), 1);
+    EXPECT_EQ(orderList.front().orderId, 1); // The remaining order should be order #1
+}
+
+// Test that cancelling the ONLY BUY order at a price level cleans up the map.
+TEST_F(OrderBookTest, CancelBuyOrderClearsPriceLevel) {
+    // 1. SETUP: Add a single BUY order.
+    Order buyOrder(1, OrderSide::BUY, 100, 10.00);
+    orderBook.processOrder(buyOrder);
+    
+    // Verify initial state
+    EXPECT_EQ(orderBook.getBids().size(), 1);
+
+    // 2. ACTION: Cancel the order.
+    orderBook.cancelOrder(1);
+
+    // 3. VERIFICATION: The bids book should now be completely empty.
+    EXPECT_TRUE(orderBook.getBids().empty());
+}
+
+// Test that cancelling the ONLY SELL order at a price level cleans up the map.
+TEST_F(OrderBookTest, CancelSellOrderClearsPriceLevel) {
+    // 1. SETUP: Add a single SELL order.
+    Order sellOrder(1, OrderSide::SELL, 100, 10.25);
+    orderBook.processOrder(sellOrder);
+    
+    // Verify initial state
+    EXPECT_EQ(orderBook.getAsks().size(), 1);
+
+    // 2. ACTION: Cancel the order.
+    orderBook.cancelOrder(1);
+
+    // 3. VERIFICATION: The asks book should now be completely empty.
+    EXPECT_TRUE(orderBook.getAsks().empty());
+}
+
+// Test cancelling an order ID that does not exist in the book.
+TEST_F(OrderBookTest, CancelNonExistentOrder) {
+    // 1. SETUP: Add a single BUY order with ID 1.
+    Order buyOrder(1, OrderSide::BUY, 100, 10.00);
+    orderBook.processOrder(buyOrder);
+
+    // 2. ACTION: Attempt to cancel a bogus order ID (999).
+    // The EXPECT_NO_THROW macro asserts that the code inside doesn't crash.
+    EXPECT_NO_THROW(orderBook.cancelOrder(999));
+
+    // 3. VERIFICATION: Verify that the state of the book is unchanged.
+    const auto& bids = orderBook.getBids();
+    EXPECT_FALSE(bids.empty());
+    EXPECT_EQ(bids.at(10.00).front().orderId, 1);
+}
+
+// Test cancelling an order that has already been fully filled.
+TEST_F(OrderBookTest, CancelAlreadyFilledOrder) {
+    // 1. SETUP: Add a sell order (ID 1) and fill it with a buy order (ID 2).
+    Order sellOrder(1, OrderSide::SELL, 100, 10.00);
+    Order buyOrder(2, OrderSide::BUY, 100, 10.00);
+    orderBook.processOrder(sellOrder);
+    orderBook.processOrder(buyOrder);
+    
+    // Verify the book is empty after the trade.
+    EXPECT_TRUE(orderBook.getAsks().empty());
+    EXPECT_TRUE(orderBook.getBids().empty());
+
+    // 2. ACTION: Attempt to cancel the now-filled sell order (ID 1).
+    EXPECT_NO_THROW(orderBook.cancelOrder(1));
+
+    // 3. VERIFICATION: The book should remain empty.
+    EXPECT_TRUE(orderBook.getAsks().empty());
+    EXPECT_TRUE(orderBook.getBids().empty());
+}
